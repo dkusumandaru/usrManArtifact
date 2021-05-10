@@ -16,7 +16,7 @@
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
-    <dependencies>
+   <dependencies>
         <!-- Spring MVC -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -115,7 +115,7 @@
             <version>2.2.1</version>
         </dependency>
        
-        <!-- <dependency>
+<!--        <dependency>
             <groupId>org.eclipse.persistence</groupId>
             <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
             <version>2.7.7</version>
@@ -129,17 +129,12 @@
         </dependency>
         
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-devtools -->
-
+ 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
         </dependency>
-        
-
-        <!--<dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>-->
+       
         
 
         <dependency>
@@ -174,12 +169,10 @@
             <artifactId>thymeleaf-spring5</artifactId>
         </dependency>
         
-        <!-- 
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-security</artifactId>
-            </dependency>
-        -->
+<!--        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>-->
         <dependency>
             <groupId>net.minidev</groupId>
             <artifactId>json-smart</artifactId>
@@ -193,12 +186,6 @@
             <scope>test</scope>
             <type>jar</type>
         </dependency>
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt</artifactId>
-            <version>0.9.1</version>
-        </dependency>
-        
         <dependency>
             <!-- Automated JSON API documentation for API's built with Spring -->
             <groupId>io.springfox</groupId>
@@ -223,6 +210,7 @@
             </plugin>
         </plugins>
     </build>
+        
     <packaging>jar</packaging>
     <pluginRepositories>
         <pluginRepository>
@@ -249,4 +237,5 @@
             </snapshots>
         </repository>
     </repositories>
+
 </project>
