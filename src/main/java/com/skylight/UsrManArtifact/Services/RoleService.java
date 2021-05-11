@@ -29,12 +29,12 @@ public class RoleService implements RoleInterface {
     }
     
     @Override
-    public Optional<Role> getById(String id) {
+    public Optional<Role> getById(Integer id) {
         return roleRepository.findById(id);
     }
 
     @Override
-    public void deleleteById(String id) {
+    public void deleleteById(Integer id) {
         roleRepository.deleteById(id);
     }
 
@@ -50,13 +50,7 @@ public class RoleService implements RoleInterface {
 
     @Override
     public List<Role> getRoleById(Integer id) {
-       return roleRepository.getById(id);
+       return roleRepository.getRoleById(id);
     }
-
-    public List<Role> getById(Integer idRole) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-
     
 }
