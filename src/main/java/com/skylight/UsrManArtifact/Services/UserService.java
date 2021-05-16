@@ -5,7 +5,7 @@
  */
 package com.skylight.UsrManArtifact.Services;
 
-import com.skylight.UsrManArtifact.Entities.User;
+import com.skylight.UsrManArtifact.Entities.Users;
 import com.skylight.UsrManArtifact.Repositories.UserRepository;
 import com.skylight.UsrManArtifact.ServiceInterfaces.UserInterface;
 import java.util.List;
@@ -23,13 +23,18 @@ public class UserService implements UserInterface{
     
 
     @Override
-    public Iterable<User> getUserActive() {
+    public Iterable<Users> getUserActive() {
        return userRepository.getUserActive();
     }
 
     @Override
-    public List<User> getUserById(String id) {
+    public List<Users> getUserById(String id) {
         return userRepository.getUserById(id);
+    }
+
+    @Override
+    public List<Users> findByEmail(String email) {
+        return userRepository.findByEmail(email);
     }
     
 }

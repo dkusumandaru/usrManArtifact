@@ -51,6 +51,9 @@ public class JwtUtil {
         //test custom claims
         claims.put("data", "ariska");
         
+        System.out.println(userDetails);
+        System.out.println(claims);
+        
         return createToken(claims, userDetails.getUsername());
     }
 

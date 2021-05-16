@@ -5,7 +5,7 @@
  */
 package com.skylight.UsrManArtifact.Controllers;
 
-import com.skylight.UsrManArtifact.Entities.User;
+import com.skylight.UsrManArtifact.Entities.Users;
 import com.skylight.UsrManArtifact.Services.UserService;
 import net.minidev.json.JSONArray;
 import net.minidev.json.JSONObject;
@@ -26,12 +26,12 @@ public class UserController {
     @GetMapping("/user")
     public String getUser(Model userModel) {
 
-        Iterable<User> user = userService.getUserActive();
+        Iterable<Users> user = userService.getUserActive();
 
         JSONArray jsonArray = new JSONArray();;
         JSONObject jsonObject2 = new JSONObject();
 
-        for (User users : user) {
+        for (Users users : user) {
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("first_name", users.getUserFirstName());
             jsonObject.put("middle_name", users.getUserMiddleName());
