@@ -53,10 +53,6 @@
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
             <version>2.4.2</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>mysql</groupId>
@@ -130,10 +126,10 @@
         
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-devtools -->
  
-        <dependency>
+<!--        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
-        </dependency>
+        </dependency>-->
        
         
 
@@ -169,10 +165,10 @@
             <artifactId>thymeleaf-spring5</artifactId>
         </dependency>
         
-<!--        <dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>-->
+        </dependency>
         <dependency>
             <groupId>net.minidev</groupId>
             <artifactId>json-smart</artifactId>
@@ -198,6 +194,13 @@
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
             <version>2.7.0</version>
+        </dependency>
+        
+        
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.9.1</version>
         </dependency>
         
     </dependencies>

@@ -5,9 +5,9 @@
     <class>com.skylight.UsrManArtifact.Entities.DivisionDetail</class>
     <class>com.skylight.UsrManArtifact.Entities.UserDivisionDetail</class>
     <class>com.skylight.UsrManArtifact.Entities.UserAuth</class>
-    <class>com.skylight.UsrManArtifact.Entities.User</class>
     <class>com.skylight.UsrManArtifact.Entities.Division</class>
     <class>com.skylight.UsrManArtifact.Entities.Role</class>
+    <class>com.skylight.UsrManArtifact.Entities.Users</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/us_man_db?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

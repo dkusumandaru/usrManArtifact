@@ -5,7 +5,7 @@
  */
 package com.skylight.UsrManArtifact.ServiceInterfaces;
 
-import com.skylight.UsrManArtifact.Entities.User;
+import com.skylight.UsrManArtifact.Entities.Users;
 import java.util.List;
 
 /**
@@ -13,6 +13,7 @@ import java.util.List;
  * @author dragon
  */
 public interface UserInterface {
-   Iterable <User> getUserActive();
-   List<User> getUserById(String id); 
+   Iterable <Users> getUserActive();
+   List<Users> getUserById(String id);
+   List<Users> findByEmail(String email);
 }

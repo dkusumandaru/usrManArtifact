@@ -25,25 +25,25 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author dragon
  */
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "User.findAll", query = "SELECT u FROM User u")
-    , @NamedQuery(name = "User.findByUserId", query = "SELECT u FROM User u WHERE u.userId = :userId")
-    , @NamedQuery(name = "User.findByUserName", query = "SELECT u FROM User u WHERE u.userName = :userName")
-    , @NamedQuery(name = "User.findByUserFirstName", query = "SELECT u FROM User u WHERE u.userFirstName = :userFirstName")
-    , @NamedQuery(name = "User.findByUserMiddleName", query = "SELECT u FROM User u WHERE u.userMiddleName = :userMiddleName")
-    , @NamedQuery(name = "User.findByUserLastName", query = "SELECT u FROM User u WHERE u.userLastName = :userLastName")
-    , @NamedQuery(name = "User.findByUserGender", query = "SELECT u FROM User u WHERE u.userGender = :userGender")
-    , @NamedQuery(name = "User.findByUserBirthDay", query = "SELECT u FROM User u WHERE u.userBirthDay = :userBirthDay")
-    , @NamedQuery(name = "User.findByUserAddress", query = "SELECT u FROM User u WHERE u.userAddress = :userAddress")
-    , @NamedQuery(name = "User.findByUserPhone", query = "SELECT u FROM User u WHERE u.userPhone = :userPhone")
-    , @NamedQuery(name = "User.findByUserEmail", query = "SELECT u FROM User u WHERE u.userEmail = :userEmail")
-    , @NamedQuery(name = "User.findByUserPassword", query = "SELECT u FROM User u WHERE u.userPassword = :userPassword")
-    , @NamedQuery(name = "User.findByUserCreate", query = "SELECT u FROM User u WHERE u.userCreate = :userCreate")
-    , @NamedQuery(name = "User.findByUserUpdate", query = "SELECT u FROM User u WHERE u.userUpdate = :userUpdate")
-    , @NamedQuery(name = "User.findByUserActive", query = "SELECT u FROM User u WHERE u.userActive = :userActive")})
-public class User implements Serializable {
+    @NamedQuery(name = "Users.findAll", query = "SELECT u FROM Users u")
+    , @NamedQuery(name = "Users.findByUserId", query = "SELECT u FROM Users u WHERE u.userId = :userId")
+    , @NamedQuery(name = "Users.findByUserName", query = "SELECT u FROM Users u WHERE u.userName = :userName")
+    , @NamedQuery(name = "Users.findByUserFirstName", query = "SELECT u FROM Users u WHERE u.userFirstName = :userFirstName")
+    , @NamedQuery(name = "Users.findByUserMiddleName", query = "SELECT u FROM Users u WHERE u.userMiddleName = :userMiddleName")
+    , @NamedQuery(name = "Users.findByUserLastName", query = "SELECT u FROM Users u WHERE u.userLastName = :userLastName")
+    , @NamedQuery(name = "Users.findByUserGender", query = "SELECT u FROM Users u WHERE u.userGender = :userGender")
+    , @NamedQuery(name = "Users.findByUserBirthDay", query = "SELECT u FROM Users u WHERE u.userBirthDay = :userBirthDay")
+    , @NamedQuery(name = "Users.findByUserAddress", query = "SELECT u FROM Users u WHERE u.userAddress = :userAddress")
+    , @NamedQuery(name = "Users.findByUserPhone", query = "SELECT u FROM Users u WHERE u.userPhone = :userPhone")
+    , @NamedQuery(name = "Users.findByUserEmail", query = "SELECT u FROM Users u WHERE u.userEmail = :userEmail")
+    , @NamedQuery(name = "Users.findByUserPassword", query = "SELECT u FROM Users u WHERE u.userPassword = :userPassword")
+    , @NamedQuery(name = "Users.findByUserCreate", query = "SELECT u FROM Users u WHERE u.userCreate = :userCreate")
+    , @NamedQuery(name = "Users.findByUserUpdate", query = "SELECT u FROM Users u WHERE u.userUpdate = :userUpdate")
+    , @NamedQuery(name = "Users.findByUserActive", query = "SELECT u FROM Users u WHERE u.userActive = :userActive")})
+public class Users implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -116,14 +116,14 @@ public class User implements Serializable {
     @Column(name = "user_active")
     private String userActive;
 
-    public User() {
+    public Users() {
     }
 
-    public User(String userId) {
+    public Users(String userId) {
         this.userId = userId;
     }
 
-    public User(String userId, String userName, String userFirstName, String userLastName, String userGender, Date userBirthDay, String userAddress, String userPhone, String userEmail, String userPassword, Date userCreate, Date userUpdate, String userActive) {
+    public Users(String userId, String userName, String userFirstName, String userLastName, String userGender, Date userBirthDay, String userAddress, String userPhone, String userEmail, String userPassword, Date userCreate, Date userUpdate, String userActive) {
         this.userId = userId;
         this.userName = userName;
         this.userFirstName = userFirstName;
@@ -261,10 +261,10 @@ public class User implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof User)) {
+        if (!(object instanceof Users)) {
             return false;
         }
-        User other = (User) object;
+        Users other = (Users) object;
         if ((this.userId == null && other.userId != null) || (this.userId != null && !this.userId.equals(other.userId))) {
             return false;
         }
@@ -273,7 +273,7 @@ public class User implements Serializable {
 
     @Override
     public String toString() {
-        return "com.skylight.UsrManArtifact.Entities.User[ userId=" + userId + " ]";
+        return "com.skylight.UsrManArtifact.Entities.Users[ userId=" + userId + " ]";
     }
     
 }

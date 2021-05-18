@@ -17,10 +17,10 @@ import org.springframework.stereotype.Repository;
  * @author dragon
  */
 @Repository
-public interface RoleRepository extends CrudRepository<Role, String> {
+public interface RoleRepository extends CrudRepository<Role, Integer> {
     @Query(value = "SELECT * FROM role WHERE role.role_active = 'true'", nativeQuery = true)
     Iterable <Role> getRoleActive();
       
     @Query(value = "SELECT * FROM role WHERE role.role_id = :id AND role.role_active = 'true'", nativeQuery = true)
-    List <Role> getById(@Param(value="id") Integer id);
+    List <Role> getRoleById(@Param(value="id") Integer id);
 }

@@ -16,9 +16,9 @@ import java.util.Optional;
 public interface RoleInterface {
     Iterable<Role> getAll(); 
     Iterable <Role> getRoleActive();
-    Optional<Role> getById(String id);
+    Optional<Role> getById(Integer id);
     List<Role> getRoleById(Integer id);
-    void deleleteById(String id);
+    void deleleteById(Integer id);
     void save(Role product);
     
 }
